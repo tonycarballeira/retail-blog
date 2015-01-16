@@ -5,8 +5,11 @@
 <%= link_to "Post a New Status", new_status_path, class: "btn btn-success" %>
 
 <% current_user.statuses.each do |status| %>
-  <div class="status row">
+  <div class="status">
+  <div class="row">
+  </div>
     <div class="span1">
+    <%= image_tag status.user.gravatar_url %>
       avatar
       </div>
     <div class="span7"
